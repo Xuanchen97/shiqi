@@ -69,7 +69,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             <div class="container">
                 <div class="row pad-botm">
                     <div class="col-md-12">
-                        <h4 class="header-line">Management</h4>
+                        <h4 class="header-line">管理</h4>
                     </div>
 <!-- 
                     <div class="col-md-12">
@@ -86,7 +86,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <!-- Advanced Tables -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Users
+                                用户
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
