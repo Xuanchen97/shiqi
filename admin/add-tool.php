@@ -96,7 +96,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                 <div class="form-group">
                                     <label>地址<span style="color:red;">*</span></label>
-                                    <input class="form-control" type="number" name="address" autocomplete="off" />
+                                    <input class="form-control" type="text" name="address" autocomplete="off" />
                                 </div>
 
                                 <div class="form-group">

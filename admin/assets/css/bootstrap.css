@@ -6214,7 +6214,7 @@ a.list-group-item-danger.active:focus {
     color: white;
     font-weight: bold;
     background-color: #f5f5f5;
-    border-color: #ddd;
+    /* border-color: #ddd; */
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
