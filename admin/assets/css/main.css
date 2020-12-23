@@ -1,0 +1,21 @@
+.label {
+    font-size: 13.5px !important;
+    font-weight: normal !important;
+}
+
+
+/* li.btn-success {
+  background-color: #349174 !important;
+} */
+
+.footer-section {
+    padding-bottom: 10px !important;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.panel-default>.panel-heading {
+    background-color: palevioletred;
+}
