@@ -71,14 +71,14 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-md-12">
                         <h4 class="header-line">Management</h4>
                     </div>
-
+<!-- 
                     <div class="col-md-12">
                         <a href="create-admin.php">
                             <i class="fa fa-plus fa-2x" aria-hidden="true" style="color:palevioletred;"></i>
                             &nbsp;
                             <span style="font-family: sans-serif; color: black;"> Create New Account</span>
                         </a>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="row">
