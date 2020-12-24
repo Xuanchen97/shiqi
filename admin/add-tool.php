@@ -34,10 +34,10 @@ if (strlen($_SESSION['alogin']) == 0) {
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
             $_SESSION['msg'] = "Transaction inserted successfully";
-            header('location:manage-tools.php');
+            header('location:manage-trades.php');
         } else {
             $_SESSION['error'] = "Something went wrong. Please try again";
-            header('location:manage-tools.php');
+            header('location:manage-trades.php');
         }
     }
 ?>

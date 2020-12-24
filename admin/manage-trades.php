@@ -7,12 +7,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 } else {
     if (isset($_GET['del'])) {
         $id = $_GET['del'];
-        $sql = "delete from tbltrade  WHERE id=:id";
+        $sql = "delete from tbltransaction  WHERE id=:id";
         $query = $dbh->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->execute();
-        $_SESSION['delmsg'] = "Trade deleted scuccessfully ";
         header('location:manage-trades.php');
+        $_SESSION['delmsg'] = "删除成功！";
     }
 
 
@@ -143,7 +143,8 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         <td class="center"><?php echo htmlentities($result->sellingPrice - $result->cost - $result->loss); ?></td>
                                                         <td class="center"><?php echo htmlentities($result->date); ?></td>
                                                         <td class="center">
-                                                            <a href="edit-trade.php?catid=<?php echo htmlentities($result->id); ?>"><button class="btn btn-primary"><i class="fa fa-edit "></i>详情</button>
+                                                            <a href="edit-trade.php?catid=<?php echo htmlentities($result->id); ?>"><button class="btn btn-primary"><i class="fa fa-edit "></i>详情</button></a>
+                                                            <a href="manage-trades.php?del=<?php echo htmlentities($result->id); ?>" onclick="return confirm('确定要删除此订单吗？');"><button class=" btn btn-danger"> 删除</button></a>
                                                         </td>
                                                     </tr>
                                             <?php $cnt = $cnt + 1;
@@ -176,7 +177,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <script src="assets/js/dataTables/jquery.dataTables.js"></script>
         <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
         <!-- CUSTOM SCRIPTS  -->
-               <!-- <script src="assets/js/custom.js"></script> -->
+        <!-- <script src="assets/js/custom.js"></script> -->
     </body>
 
     </html>
