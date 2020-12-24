@@ -114,7 +114,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <tr>
                                                 <th>#</th>
                                                 <th>姓名</th>
-                                                <th>地址</th>
+                                                <!-- <th>地址</th> -->
                                                 <th>产品</th>
                                                 <th>斤数</th>
                                                 <th>进价</th>
@@ -135,7 +135,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <tr class="odd gradeX">
                                                         <td class="center"><?php echo htmlentities($cnt); ?></td>
                                                         <td class="center"><?php echo htmlentities($result->name); ?></td>
-                                                        <td class="center"><?php echo htmlentities($result->address); ?></td>
+                                                        <!-- <td class="center"><?php echo htmlentities($result->address); ?></td> -->
                                                         <td class="center"><?php echo htmlentities($result->product); ?></td>
                                                         <td class="center"><?php echo htmlentities($result->unit); ?></td>
                                                         <td class="center"><?php echo htmlentities($result->cost); ?></td>
