@@ -1,4 +1,5 @@
 <?php
+require 'includes/address.php';
 session_start();
 error_reporting(0);
 include('includes/config.php');
@@ -40,6 +41,9 @@ if (strlen($_SESSION['alogin']) == 0) {
             header('location:manage-trades.php');
         }
     }
+
+
+
 ?>
     <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -84,19 +88,30 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="panel-body">
                             <form role="form" method="post">
                                 <div class="form-group">
+                                    <label>快捷粘贴AI识别</label><br />
+                                    <textarea rows="5" cols="40" id="rawData" name="rawData"></textarea>
+                                </div>
+
+                                <button type="submit" id="identify" name="identify" class="btn btn-info">识别</button>
+                                <hr />
+                            </form>
+
+
+                            <form role="form" method="post">
+                                <div class="form-group">
                                     <label>姓名<span style="color:red;">*</span></label>
-                                    <input class="form-control" type="text" name="name" autocomplete="off" required />
+                                    <input class="form-control" type="text" id="name" name="name" autocomplete="off" required />
                                 </div>
 
                                 <div class="form-group">
                                     <label>电话</label>
-                                    <input class="form-control" type="text" name="phone" autocomplete="off" />
+                                    <input class="form-control" type="text" id="phone" name="phone" autocomplete="off" />
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>地址<span style="color:red;">*</span></label>
-                                    <input class="form-control" type="text" name="address" autocomplete="off" />
+                                    <input class="form-control" type="text" id="address" name="address" autocomplete="off" />
                                 </div>
 
                                 <div class="form-group">
@@ -186,9 +201,21 @@ if (strlen($_SESSION['alogin']) == 0) {
         <!-- BOOTSTRAP SCRIPTS  -->
         <script src="assets/js/bootstrap.js"></script>
         <!-- CUSTOM SCRIPTS  -->
-               <!-- <script src="assets/js/custom.js"></script> -->
+        <!-- <script src="assets/js/custom.js"></script> -->
 
     </body>
 
     </html>
-<?php } ?>
+<?php
+    if (isset($_POST['identify'])) {
+        $rawData = $_POST['rawData'];
+        $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
+        $r = Address::smart($rawData);
+        //print_r($r);
+        echo "<script>document.getElementById('rawData').value='{$rawData}'</script>";
+        echo "<script>document.getElementById('name').value='{$r['name']}'</script>";
+        echo "<script>document.getElementById('phone').value='{$r['mobile']}'</script>";
+        echo "<script>document.getElementById('address').value='{$r['addr']}'</script>";
+    }
+}
+?>
