@@ -1,9 +1,9 @@
 <?php
-require 'includes/address.php';
+require './includes/address.php';
 session_start();
 error_reporting(0);
-include('includes/config.php');
-include('includes/timeZone.php');
+include('./includes/config.php');
+include('./includes/timeZone.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:../index.php');
 } else {
@@ -209,9 +209,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 <?php
     if (isset($_POST['identify'])) {
         $rawData = $_POST['rawData'];
-        $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
+      //  $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
         $r = Address::smart($rawData);
-        print_r($r);
+       // print_r($r);
         echo "<script>document.getElementById('rawData').value='{$rawData}'</script>";
         echo "<script>document.getElementById('name').value='{$r['name']}'</script>";
         echo "<script>document.getElementById('phone').value='{$r['mobile']}'</script>";
