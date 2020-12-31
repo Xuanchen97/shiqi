@@ -41,8 +41,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             header('location:manage-trades.php');
         }
     }
-    $rawData = $_POST['rawData'];
-      $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
+
+    $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
     $r = Address::smart($address);
     print_r($r);
 
