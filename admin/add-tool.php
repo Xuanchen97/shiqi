@@ -1,9 +1,9 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
 session_start();
-error_reporting(0);
-include('./includes/address.php');
+error_reporting(1);
+require 'includes/address.php';
 include('./includes/config.php');
 include('./includes/timeZone.php');
 if (strlen($_SESSION['alogin']) == 0) {

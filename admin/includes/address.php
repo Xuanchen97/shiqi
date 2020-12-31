@@ -186,9 +186,9 @@ class Address
     */
     public static function parse($a1, $a2, $a3)
     {
-        require './data/a3.php';
-        require './data/a2.php';
-        require './data/a1.php';
+        require 'data/a3.php';
+        require 'data/a2.php';
+        require 'data/a1.php';
 
 
         $r = array();
