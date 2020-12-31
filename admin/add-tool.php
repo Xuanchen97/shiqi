@@ -44,6 +44,10 @@ if (strlen($_SESSION['alogin']) == 0) {
         }
     }
 
+      $address = "刘轩辰 129103223 上海上海市闵行区浦江镇永跃路550号";
+    $r = Address::smart($address);
+     print_r($r);
+
 
 ?>
     <!DOCTYPE html>
