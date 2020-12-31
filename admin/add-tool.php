@@ -60,9 +60,6 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLE  -->
         <link href="assets/css/style.css" rel="stylesheet" />
-        <!-- GOOGLE FONT -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
     </head>
 
     <body>
