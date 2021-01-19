@@ -6,6 +6,7 @@ error_reporting(1);
 require './includes/address.php';
 include('./includes/config.php');
 include('./includes/timeZone.php');
+
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:../index.php');
 } else {
@@ -62,6 +63,8 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLE  -->
         <link href="assets/css/style.css" rel="stylesheet" />
+
+        <link href="assets/css/main.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -190,7 +193,22 @@ if (strlen($_SESSION['alogin']) == 0) {
         </div>
         </div>
         <!-- CONTENT-WRAPPER SECTION END-->
-        <?php include('./includes/footer.php'); ?>
+
+        <section class="footer-section" style="border-top: 5px solid palevioletred;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        &copy; 2021 盛诗淇
+                    </div>
+
+                </div>
+                <!-- <div class="row">
+            <div class="col-md-12">
+            <p>Custom style from www.binarytheme.com used under <a href="https://creativecommons.org/licenses/by/3.0/">CC 3.0.</a></p>
+            </div>
+        </div> -->
+            </div>
+        </section>
         <!-- FOOTER SECTION END-->
         <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
         <!-- CORE JQUERY  -->
