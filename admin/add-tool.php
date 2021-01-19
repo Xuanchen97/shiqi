@@ -3,10 +3,9 @@
 // ini_set("display_errors", 1);
 session_start();
 error_reporting(1);
-require './includes/address.php';
+require 'includes/address.php';
 include('./includes/config.php');
 include('./includes/timeZone.php');
-
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:../index.php');
 } else {
@@ -63,8 +62,6 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <!-- CUSTOM STYLE  -->
         <link href="assets/css/style.css" rel="stylesheet" />
-
-        <link href="assets/css/main.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -96,7 +93,6 @@ if (strlen($_SESSION['alogin']) == 0) {
                                 <button type="submit" id="identify" name="identify" class="btn btn-info">识别</button>
                                 <hr />
                             </form>
-
 
                             <form role="form" method="post">
                                 <div class="form-group">
@@ -133,7 +129,6 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <input class="form-control" type="number" name="sellingPrice" autocomplete="off" />
                                 </div>
 
-
                                 <div class="form-group">
                                     <label>进价</label>
                                     <input class="form-control" type="number" name="cost" autocomplete="off" />
@@ -145,7 +140,6 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <option value="shunfeng" selected="selected">顺丰</option>
                                         <option value="yunda">韵达</option>
                                     </select>
-
                                 </div>
 
                                 <div class="form-group">
@@ -176,13 +170,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <label>备注</label><br />
                                     <textarea rows="5" cols="40" name="comments"></textarea>
                                 </div>
-
-
                                 <button type="submit" id="submit" name="add" class="btn btn-info">添加</button>
-
-
-
-
                             </form>
                         </div>
                     </div>
@@ -193,22 +181,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         </div>
         </div>
         <!-- CONTENT-WRAPPER SECTION END-->
-
-        <section class="footer-section" style="border-top: 5px solid palevioletred;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        &copy; 2021 盛诗淇
-                    </div>
-
-                </div>
-                <!-- <div class="row">
-            <div class="col-md-12">
-            <p>Custom style from www.binarytheme.com used under <a href="https://creativecommons.org/licenses/by/3.0/">CC 3.0.</a></p>
-            </div>
-        </div> -->
-            </div>
-        </section>
+        <?php include('includes/footer.php'); ?>
         <!-- FOOTER SECTION END-->
         <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
         <!-- CORE JQUERY  -->
@@ -217,7 +190,6 @@ if (strlen($_SESSION['alogin']) == 0) {
         <script src="assets/js/bootstrap.js"></script>
         <!-- CUSTOM SCRIPTS  -->
         <!-- <script src="assets/js/custom.js"></script> -->
-
     </body>
 
     </html>
