@@ -3,7 +3,7 @@
 // ini_set("display_errors", 1);
 session_start();
 error_reporting(1);
-require 'includes/address.php';
+require './includes/address.php';
 include('./includes/config.php');
 include('./includes/timeZone.php');
 if (strlen($_SESSION['alogin']) == 0) {
@@ -115,9 +115,8 @@ if (strlen($_SESSION['alogin']) == 0) {
                                 <div class="form-group">
                                     <label>产品<span style="color:red;">*</span></label>
                                     <select class="form-control" name="product" required>
-                                        <option value="草莓-大果" selected="selected">草莓-大果</option>
-                                        <option value="草莓-中果">草莓-中果</option>
-                                        <option value="草莓-小果">草莓-小果</option>
+                                        <option value="九九草莓" selected="selected">九九草莓</option>
+                                        <option value="智利车厘子">智利车厘子</option>
                                     </select>
                                 </div>
 
@@ -191,7 +190,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         </div>
         </div>
         <!-- CONTENT-WRAPPER SECTION END-->
-        <?php include('includes/footer.php'); ?>
+        <?php include('./includes/footer.php'); ?>
         <!-- FOOTER SECTION END-->
         <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
         <!-- CORE JQUERY  -->
